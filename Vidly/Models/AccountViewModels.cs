@@ -5,6 +5,16 @@ namespace Vidly.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
+
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
+        [Required]
+        [Display(Name = "Drivers License")]
+        public string DriversLicense { get; set; }
+
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
@@ -64,6 +74,17 @@ namespace Vidly.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "Phone Number")]
+        public string PhoneNumber { get; set; }
+
+
+        [Required]
+        [StringLength (255)]
+        [Display(Name = "Drivers License")]
+        public string DriversLicense { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
